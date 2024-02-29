@@ -65,8 +65,10 @@ int main(int argc, char** argv) {
 			Greetings(user_name);
 			attempts = theGame(parameter);
 			printBestResToFile(user_name, attempts, high_scores_filename);
+		} else{
+			std::cerr << ("Invalid flag, type --help") << std::endl;
+			exit(EXIT_FAILURE);
 		}
-
 	} else if(argc == 3){ // go here for a two arguments call
 		std::string argv_1{argv[1]};
 		std::string argv_2{argv[2]};
@@ -125,15 +127,13 @@ int main(int argc, char** argv) {
 			std::multimap<int, std::string> Results; 
 			GettingResults(in_file, Results);	// getting results from the file
 			outputResults(Results);	// output those results 
-		}
-		else if(argv_1 == "-table" && argv_2 == "-best"){ // first argument is -table, second -best 
+		} else if(argv_1 == "-table" && argv_2 == "-best"){ // first argument is -table, second -best 
 			std::ifstream in_file{fileReadOpen(high_scores_filename)};
 			std::map<std::string, int> Results;
 			GettingBestResults(in_file, Results); // getting only the best
 			outputResults(Results); // output those best
-		}
-		else{
-			std::cerr << ("Invalid flag") << std::endl;
+		} else{
+			std::cerr << ("Invalid flag, type --help") << std::endl;
 			exit(EXIT_FAILURE);
 		}
 	} else if(argc == 2){ // go here for a one argument call
@@ -149,8 +149,7 @@ int main(int argc, char** argv) {
 			printBestResToFile(user_name, attempts, high_scores_filename);
 		} else if(argv_1 == "--help"){
 			Info();
-		}
-		else{
+		} else{
 			std::cerr << ("Invalid argument list for a two argument call, type --help") << std::endl;
 			exit(EXIT_FAILURE);
 		}
@@ -164,8 +163,7 @@ int main(int argc, char** argv) {
 		std::multimap<int, std::string> Results;
 		GettingResults(in_file, Results);
 		outputResults(Results);
-	}
-	else{
+	} else{
 		std::cerr << ("Invalid argument number, type --help") << std::endl;
 		exit(EXIT_FAILURE);
 	}
