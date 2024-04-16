@@ -1,4 +1,6 @@
-# **19/02 Cpp Basic projects** 
----
-## This folder contains studying projects which have been developed during the otus cpp basic course 
----
+# Statistics otus homework number 5
+## Awaits unlimited length data succession for the input
+## end your succession with a termination hot key for your system
+# Otus lesson 12 homework 5
+## this programs awaits unlimited double type data for the input
+## end you seccussion with a termination hot key for your system
