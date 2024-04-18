@@ -1,4 +1,3 @@
-# **19/02 Cpp Basic projects** 
----
-## This folder contains studying projects which have been developed during the otus cpp basic course 
----
+#Lesson 10 Homework 4
+## Use CMakeLists to build the project
+### On linux download sfml by yourself 
